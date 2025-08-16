@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoirSec - Cybersecurity Specialists</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #00f0ff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--primary);
+            color: white;
+            scroll-behavior: smooth;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width .3s;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 240, 255, 0.3);
+        }
+        
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+        
+        .accent-text {
+            color: var(--accent);
+        }
+        
+        .border-accent {
+            border-color: var(--accent);
+        }
+        
+        .logo-text {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--accent);
+            transform: scale(1.03);
+        }
+
+        .pricing-highlight {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-highlight::after {
+            content: 'POPULER';
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background: var(--accent);
+            color: black;
+            padding: 2px 30px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-opacity-90 backdrop-blur-sm bg-black shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-white text-2xl font-bold logo-text">NOIR<span class="accent-text">SEC</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-10">
+                        <a href="#home" class="nav-link text-white hover:text-accent px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-white hover:text-accent px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#team" class="nav-link text-white hover:text-accent px-3 py-2 text-sm font-medium">Team</a>
+                        <a href="#services" class="nav-link text-white hover:text-accent px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#membership" class="nav-link text-white hover:text-accent px-3 py-2 text-sm font-medium">Membership</a>
+                        <a href="#contact" class="nav-link text-white hover:text-accent px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-white hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        WE ARE <span class="accent-text">NOIRSEC</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-lg">
+                        Elite cybersecurity specialists securing your digital assets with cutting-edge solutions and unparalleled expertise.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#membership" class="px-8 py-3 bg-accent text-black font-semibold rounded hover:bg-white transition duration-300">Join Membership</a>
+                        <a href="#services" class="px-8 py-3 border-2 border-accent text-white font-semibold rounded hover:bg-accent hover:text-black transition duration-300">Our Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://files.catbox.moe/osvxen.png" alt="Digital security concept illustration showing glowing shield protecting network nodes with blue holographic effect" class="rounded-lg shadow-2xl border-2 border-accent" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">ABOUT <span class="accent-text">NOIRSEC</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dd5c5d55-c0f5-479e-89a6-0b573b82237e.png" alt="Cyber security team working in a high-tech operations center with multiple monitors displaying network security dashboards" class="rounded-lg shadow-lg" />
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Who We Are</h3>
+                    <p class="text-gray-300 mb-6">
+                        NoirSec is a collective of cybersecurity experts dedicated to safeguarding digital infrastructures from evolving threats. With decades of combined experience, we specialize in proactive threat detection, vulnerability assessment, and robust security implementations.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Our team operates with precision and discretion, ensuring your systems remain impenetrable. We believe in security through innovation, constantly researching and implementing cutting-edge defensive technologies.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-accent mr-2"></i>
+                            <span>Advanced Threat Protection</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-lock text-accent mr-2"></i>
+                            <span>Encryption Services</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-search text-accent mr-2"></i>
+                            <span>Vulnerability Assessment</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-accent mr-2"></i>
+                            <span>Team Training</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">MEMBERSHIP <span class="accent-text">PLANS</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto mt-6">
+                    Join our exclusive membership program and gain access to premium cybersecurity resources for lifetime.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="pricing-card bg-gray-700 p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold mb-2">BASIC</h3>
+                        <div class="text-gray-400 mb-4">Essential cybersecurity access</div>
+                        <div class="text-4xl font-bold mb-4">FREE</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Basic security articles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Monthly security newsletter</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Limited forum access</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-times text-gray-500 mr-2 mt-1"></i>
+                            <span>No tool access</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 text-center border border-gray-600 text-white rounded hover:bg-gray-600 transition duration-300">
+                        Free Sign Up
+                    </a>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="pricing-card pricing-highlight bg-gray-700 p-8 rounded-lg shadow-lg relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold mb-2">PREMIUM</h3>
+                        <div class="text-gray-400 mb-4">Lifetime cybersecurity access</div>
+                        <div class="text-4xl font-bold mb-4">Rp150.000</div>
+                        <div class="text-sm text-gray-400 mb-4">One-time payment, lifetime access</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>All basic features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Full premium content access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Security tools & scripts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Private community access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Exclusive webinars</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>VIP support</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 text-center bg-accent text-black font-semibold rounded hover:bg-white transition duration-300">
+                        Get Lifetime Access
+                    </a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card bg-gray-700 p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold mb-2">ENTERPRISE</h3>
+                        <div class="text-gray-400 mb-4">For organizations & businesses</div>
+                        <div class="text-4xl font-bold mb-4">Custom</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>All premium features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Dedicated security team</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>On-site training</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>24/7 priority support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Custom security solutions</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 text-center border border-gray-600 text-white rounded hover:bg-gray-600 transition duration-300">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">OUR <span class="accent-text">TEAM</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto mt-6">
+                    Meet the cybersecurity professionals dedicated to your digital safety. Each member of NoirSec brings unique expertise to create an impenetrable defense system for your organization.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                    <div class="relative">
+                        <img src="https://files.catbox.moe/i31la7.jpg" alt="Serious-looking male cybersecurity expert with short dark hair and glasses analyzing data on multiple screens" class="w-full h-64 object-cover" />
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-300">
+                            <p class="text-gray-300">Specializes in penetration testing and ethical hacking with 10+ years experience defeating enterprise security systems.</p>
+                            <div class="flex mt-4 space-x-3">
+                                <a href="#" class="text-gray-300 hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="text-gray-300 hover:text-accent"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-300 hover:text-accent"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Zenthix</h3>
+                        <p class="text-accent text-sm font-semibold mb-3">Lead Penetration Tester and attacker</p>
+                        <p class="text-gray-400 text-sm">founder noirsec</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/15229066-d579-4d8a-bca8-cb8ca30a260f.png" alt="Female security researcher with curly hair working on forensic analysis of digital evidence in a lab environment" class="w-full h-64 object-cover" />
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-300">
+                            <p class="text-gray-300">Digital forensics specialist with deep knowledge of incident response and malware analysis for enterprise environments.</p>
+                            <div class="flex mt-4 space-x-3">
+                                <a href="#" class="text-gray-300 hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="text-gray-300 hover:text-accent"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-300 hover:text-accent"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">metas_ploid</h3>
+                        <p class="text-accent text-sm font-semibold mb-3">Lead Penetration Tester</p>
+                        <p class="text-gray-400 text-sm">admin noirsec</p>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">OUR <span class="accent-text">SERVICES</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto mt-6">
+                    Comprehensive cybersecurity solutions tailored to your organization's specific needs and threat landscape.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-700 p-8 rounded-lg border border-gray-600 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Penetration Testing</h3>
+                    <p class="text-gray-400 mb-5">
+                        Simulate sophisticated cyber attacks to identify vulnerabilities before malicious actors can exploit them. Our ethical hackers employ the same techniques used by threats.
+                    </p>
+                    <ul class="text-gray-300 space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Advanced persistent threat simulation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Physical and social engineering tests</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Red team operations</span>
+                        </li>
+                    </ul>
+                    <a href="#membership" class="text-accent font-semibold inline-block mt-2">Available for Premium+</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-700 p-8 rounded-lg border border-gray-600 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Security Training</h3>
+                    <p class="text-gray-400 mb-5">
+                        Transform your staff from security liabilities into assets with our customized training programs designed specifically for technical and non-technical audiences.
+                    </p>
+                    <ul class="text-gray-300 space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Phishing simulation campaigns</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Secure coding workshops</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Executive threat briefings</span>
+                        </li>
+                    </ul>
+                    <a href="#membership" class="text-accent font-semibold inline-block mt-2">Available for Premium+</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-700 p-8 rounded-lg border border-gray-600 hover:border-accent transition-all duration-300">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Incident Response</h3>
+                    <p class="text-gray-400 mb-5">
+                        When breaches occur, our rapid response team works immediately to contain threats, eradicate attackers, and restore operations with minimal disruption.
+                    </p>
+                    <ul class="text-gray-300 space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>24/7 emergency response</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Forensic investigation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Post-incident recovery</span>
+                        </li>
+                    </ul>
+                    <a href="#membership" class="text-accent font-semibold inline-block mt-2">Available for Premium+</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">GET IN <span class="accent-text">TOUCH</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto mt-6">
+                    Contact NoirSec for a confidential consultation about your organization's security needs. All communications are encrypted and protected.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="text-accent text-xl mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Office Location</h4>
+                                    <p class="text-gray-400">123 Security Plaza, Cyber District, Digital City 10001</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-accent text-xl mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email Us</h4>
+                                    <p class="text-gray-400">contact@noirsec.example</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-accent text-xl mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Call Us</h4>
+                                    <p class="text-gray-400">+1 (555) 123-4567</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-accent text-xl mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Business Hours</h4>
+                                    <p class="text-gray-400">24/7 Emergency Response<br>Standard Hours: Mon-Fri, 9AM-5PM</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-300 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-accent text-white" placeholder="Your name" required>
+                            </div>
+                            
